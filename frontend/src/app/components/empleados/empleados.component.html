@@ -1,0 +1,49 @@
+<div class="row contenedor">
+  <div class="col s12 m10 offset-m1 l6 offset-l3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Registrar empleado</span>
+        <p class="subtitulo">Completa los datos y pulsa Guardar</p>
+
+        <form #empleadoForm="ngForm" (ngSubmit)="agregarEmpleado(empleadoForm)">
+          <div class="input-field">
+            <i class="material-icons prefix">person</i>
+            <input type="text" name="name" #name="ngModel"
+              [(ngModel)]="empleadoService.selectedEmpleado.name"
+              placeholder="Ingrese su nombre" required>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">work</i>
+            <input type="text" name="position" #position="ngModel"
+              [(ngModel)]="empleadoService.selectedEmpleado.position"
+              placeholder="Ingrese su cargo" required>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">place</i>
+            <input type="text" name="office" #office="ngModel"
+              [(ngModel)]="empleadoService.selectedEmpleado.office"
+              placeholder="Ingrese su lugar de trabajo" required>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">attach_money</i>
+            <input type="number" name="salary" #salary="ngModel"
+              [(ngModel)]="empleadoService.selectedEmpleado.salary"
+              placeholder="Ingrese su salario" required>
+          </div>
+
+          <div class="acciones">
+            <button type="button" class="btn grey lighten-1" (click)="resetForm(empleadoForm)">
+              <i class="material-icons left">clear</i>Limpiar
+            </button>
+            <button type="submit" class="btn blue">
+              <i class="material-icons left">save</i>Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.contenedor {
+  margin-top: 40px;
+}
+
+.card .card-content {
+  padding: 32px;
+}
+
+.subtitulo {
+  color: #757575;
+  margin-bottom: 24px;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
